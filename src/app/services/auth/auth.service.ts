@@ -39,15 +39,8 @@ export class AuthService {
   ) {}
 
   login(request: LoginRequest): Observable<LoginResponse> {
-    if (request.email === userResponse.email) {
-      return of(userResponse);
-    }
-    if (request.email === adminResponse.email) {
-      return of(adminResponse);
-    }
-
     const obs = this.http.post<LoginResponse>(
-      `${environment.apiBaseUrl}/auth/login`,
+      `${environment.apiBaseUrl}/auth/login/user`,
       request
     );
 
