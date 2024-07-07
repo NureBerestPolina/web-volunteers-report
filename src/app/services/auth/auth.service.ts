@@ -7,6 +7,7 @@ import { environment } from '../../../environments/environment';
 import { LoginResponse } from '../../models/dtos/login-response.model';
 import { RegisterRequest } from '../../models/dtos/register-request.model';
 import { LoginRequest } from '../../models/dtos/login-request.model';
+import { TokenStorageService } from './token-storage.service';
 
 export const adminResponse: LoginResponse | any = {
   id: 'ba25735e-da37-4925-8cad-5dddad98b0ae',
@@ -34,7 +35,7 @@ export class AuthService {
 
   constructor(
     private http: HttpClient,
-    //private tokenStorage: TokenStorageService
+    private tokenStorage: TokenStorageService
   ) {}
 
   login(request: LoginRequest): Observable<LoginResponse> {
@@ -78,20 +79,20 @@ export class AuthService {
     return this.$user.asObservable();
   }
 
-  // getUser(): User | undefined {
-  //   return this.tokenStorage.getUser();
-  // }
+  getUser(): User | undefined {
+    return this.tokenStorage.getUser();
+  }
 
-  // loadUserFromLocalStorage() {
-  //   this.user().subscribe((u) => {
-  //     if (u === undefined) {
-  //       const localStorageUser = this.getUser();
-  //       if (localStorageUser !== undefined) {
-  //         this.setUser(localStorageUser);
-  //       }
-  //     }
-  //   });
-  // }
+  loadUserFromLocalStorage() {
+    this.user().subscribe((u) => {
+      if (u === undefined) {
+        const localStorageUser = this.getUser();
+        if (localStorageUser !== undefined) {
+          this.setUser(localStorageUser);
+        }
+      }
+    });
+  }
 
   logout(): void {
     localStorage.clear();
