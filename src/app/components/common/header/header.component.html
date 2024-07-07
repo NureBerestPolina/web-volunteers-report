@@ -1,16 +1,16 @@
-<nav class="navbar navbar-expand-lg p-3 navbar-dark bg-dark">
+<nav class="navbar navbar-expand-lg p-2 navbar-dark bg-dark">
     <div class="container-fluid">
-      <a class="navbar-brand" href="#">Volunteer Report </a>
+      <a class="navbar-brand" href="#">🤝 Volunteer Report </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" [routerLink]="['/']" i18n>About the project</a>
+            <a class="nav-link active" aria-current="page" [routerLink]="['/']" i18n> About the project</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#our-clients" i18n>Sth else</a>
+            <a class="nav-link" href="#our-clients" i18n> Sth else</a>
           </li>
 
           <ng-container *ngIf="user?.roles?.includes(role.Administrator)">
@@ -36,7 +36,7 @@
         </ul>
         <div class="d-flex">  
           <ng-container *ngIf="user === undefined; else showLogout">
-           <a [routerLink]="['/login']" class="btn btn-primary" i18n> <i class="bi bi-person-hearts"></i> Log in to make impact</a>
+           <a [routerLink]="['/login']" class="btn btn-warning" i18n> <i class="bi bi-person-hearts"></i> Log in to make impact</a>
           </ng-container> 
 
           <ng-template #showLogout> 
