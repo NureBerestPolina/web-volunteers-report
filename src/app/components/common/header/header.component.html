@@ -10,7 +10,10 @@
             <a class="nav-link active" aria-current="page" [routerLink]="['/']" i18n> About the project</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#our-clients" i18n> Sth else</a>
+            <a class="nav-link" href="#volunteers" i18n> Volunteer profiles</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#join" i18n> Join</a>
           </li>
 
           <ng-container *ngIf="user?.roles?.includes(role.Administrator)">
@@ -41,7 +44,7 @@
 
           <ng-template #showLogout> 
            <div class="d-flex align-items-center">
-             <span>{{user?.name}}</span>
+             <span class="text-white" i18n>Hi, {{user?.name}}!</span>
                      
              <button class="btn btn-outline-danger ms-3" (click)="onLogout()" i18n><i class="bi bi-person"></i>Log out</button>
            </div>
