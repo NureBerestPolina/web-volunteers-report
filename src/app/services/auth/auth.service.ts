@@ -65,6 +65,7 @@ export class AuthService {
   }
 
   setUser(user: User): void {
+    console.log('setUser', user);
     this.$user.next(user);
   }
 

@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './components/public/home/home.component';
 import { NotFoundComponent } from './components/common/not-found/not-found.component';
 import { LoginComponent } from './components/public/login/login.component';
+import { VolunteerProfilesComponent } from './components/visitor/volunteer-profiles/volunteer-profiles.component';
 
 const routes: Routes = [
   {
@@ -16,6 +17,10 @@ const routes: Routes = [
   {
     path: 'login',
     component: LoginComponent,
+  },
+  {
+    path: 'volunteer-profiles',
+    component: VolunteerProfilesComponent,
   }
 ];
 

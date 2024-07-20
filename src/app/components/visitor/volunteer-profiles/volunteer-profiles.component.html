@@ -1,0 +1,27 @@
+<div class="container">
+    <div class="my-5">
+        <h2 i18n>Volunteer profiles: <span class="text-success">choose your volunteer</span></h2>
+
+        <div class="row align-items-stretch my-5">
+            <ng-container *ngIf="volunteers$ | async as volunteers">
+                <div class="card-deck">
+                    <div class="card align-items-center p-4" *ngFor="let volunteer of volunteers">
+                        
+                            <img class="rounded-circle thumb" [src]="volunteer.user?.avatarUrl" alt='volunteer.nickname'>
+                            <h3 class="text-primary">{{volunteer.user?.name}} 
+                            <span class="text-success"> ({{volunteer.nickname}}) </span></h3>
+
+                            <h6 class="card-subtitle mb-2 text-muted" i18n> Active since {{volunteer.user?.registerDate | date}}</h6>
+                            
+                            <p>{{volunteer.bankLink}}, {{volunteer.shortInfo}}</p>
+                            
+                    </div>
+                </div>
+            </ng-container>
+        </div>
+    </div>
+</div>
+
+<div class="divider"></div>
+
+

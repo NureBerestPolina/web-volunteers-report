@@ -36,6 +36,7 @@ export class TokenStorageService {
       id: decodedToken[JwtClaims.Sub],
       email: decodedToken[JwtClaims.Email],
       name: decodedToken[JwtClaims.Name],
+      avatarUrl: decodedToken[JwtClaims.AvatarUrl],
       registerDate: new Date(decodedToken[JwtClaims.RegisterDate]),
       roles: decodedToken[JwtClaims.Roles]?.split(','),
     };

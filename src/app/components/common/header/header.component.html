@@ -9,32 +9,39 @@
           <li class="nav-item">
             <a class="nav-link active" aria-current="page" [routerLink]="['/']" i18n> About the project</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#volunteers" i18n> Volunteer profiles</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#join" i18n> Join</a>
-          </li>
 
-          <ng-container *ngIf="user?.roles?.includes(role.Administrator)">
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" i18n>
-              Admin panel
-            </a>
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item" [routerLink]="['admin/volunteers-management']" i18n>Manage volunteers</a></li>
-              <li><hr class="dropdown-divider"></li>
-              <li><a class="dropdown-item" [routerLink]="['admin/accusations-management']" i18n>Manage accusations</a></li>
-              <li><hr class="dropdown-divider"></li>
-              <li><a class="dropdown-item" [routerLink]="['admin/categories-management']" i18n>Manage report categories</a></li>
-            </ul>
-          </li>
-          </ng-container>   
+          <ng-container *ngIf="user?.roles else startmenu">
 
-          <ng-container *ngIf="user?.roles?.includes(role.User)">
-            <a class="nav-link" aria-current="page" [routerLink]="['/volunteers']" i18n>Volunteer profiles</a>
-            <a class="nav-link" aria-current="page" [routerLink]="['/reports']" i18n>Reports</a>
+            <ng-container *ngIf="user?.roles?.includes(role.Administrator)">
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" i18n>
+                  Admin panel
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" [routerLink]="['admin/volunteers-management']" i18n>Manage volunteers</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" [routerLink]="['admin/accusations-management']" i18n>Manage accusations</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" [routerLink]="['admin/categories-management']" i18n>Manage report categories</a></li>
+                </ul>
+              </li>
+            </ng-container>   
+
+            <ng-container *ngIf="user?.roles?.includes(role.User)">
+              <a class="nav-link" aria-current="page" [routerLink]="['/volunteer-profiles']" i18n>Volunteer profiles</a>
+              <a class="nav-link" aria-current="page" [routerLink]="['/reports']" i18n>Reports</a>
+            </ng-container>
+
           </ng-container>
+
+          <ng-template #startmenu>
+            <li class="nav-item">
+              <a class="nav-link" href="#volunteers" i18n> Volunteer profiles</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#join" i18n> Join</a>
+            </li>
+          </ng-template>
 
         </ul>
         <div class="d-flex">  
@@ -44,9 +51,11 @@
 
           <ng-template #showLogout> 
            <div class="d-flex align-items-center">
-             <span class="text-white" i18n>Hi, {{user?.name}}!</span>
-                     
-             <button class="btn btn-outline-danger ms-3" (click)="onLogout()" i18n><i class="bi bi-person"></i>Log out</button>
+              <img *ngIf="user?.avatarUrl" [src]="user?.avatarUrl" alt="User Avatar" class="rounded-circle me-2" style="width: 40px; height: 40px;">
+
+              <span class="text-white" i18n>Hi, {{user?.name}}!</span>
+                      
+              <button class="btn btn-outline-danger ms-3" (click)="onLogout()" i18n><i class="bi bi-person"></i>Log out</button>
            </div>
           </ng-template>
        </div>

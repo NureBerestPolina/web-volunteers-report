@@ -25,6 +25,10 @@ export class HeaderComponent implements OnInit, OnDestroy{
     this.userSubscription$ = this.authService.user().subscribe({
       next: (user) => {
         this.user = user;
+
+        if (this.user?.avatarUrl === '') {
+          this.user.avatarUrl = 'assets/blank-avatar.png';
+        }
       },
     });
   }

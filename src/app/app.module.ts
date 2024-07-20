@@ -33,6 +33,7 @@ import { environment } from '../environments/environment';
 import { LoginComponent } from './components/public/login/login.component';
 import { HomeComponent } from './components/public/home/home.component';
 import { NotFoundComponent } from './components/common/not-found/not-found.component';
+import { VolunteerProfilesComponent } from './components/visitor/volunteer-profiles/volunteer-profiles.component';
 
 registerLocaleData(localeUk);
 
@@ -43,7 +44,8 @@ registerLocaleData(localeUk);
     FooterComponent,
     LoginComponent,
     HomeComponent,
-    NotFoundComponent
+    NotFoundComponent,
+    VolunteerProfilesComponent,
   ],
   imports: [
     BrowserModule,
