@@ -13,6 +13,8 @@ import { VolunteerProfile } from '../../../models/dtos/volunteer-profile.model';
 })
 export class VolunteerProfilesComponent {
   volunteers$?: Observable<VolunteerProfile[]>;
+  selectedCategory: string = '';
+  uniqueCategories: string[] = [];
   sortOrder: 'asc' | 'desc' = 'asc';
 
   constructor(
@@ -28,6 +30,16 @@ export class VolunteerProfilesComponent {
     this.volunteers$ = this.volunteerService.getVolunteerProfiles().pipe(
       map(volunteers => this.sortVolunteers(volunteers))
     );
+    this.volunteers$.subscribe(volunteers => {
+      // Extract unique categories from goods
+      const categories = new Set<string>();
+      volunteers.forEach(volunteer => {
+        volunteer.helpCategories.forEach(category => {
+          categories.add(category.name);
+        });
+      });
+      this.uniqueCategories = Array.from(categories);
+    });
   }
 
   sortVolunteers(volunteers: VolunteerProfile[]): VolunteerProfile[] {
@@ -42,5 +54,15 @@ export class VolunteerProfilesComponent {
     const selectElement = event.target as HTMLSelectElement;
     this.sortOrder = selectElement.value as 'asc' | 'desc';
     this.loadVolunteers();
+  }
+
+  filterVolunteers(volunteers: VolunteerProfile[]): VolunteerProfile[] {
+    if (this.selectedCategory === '') {
+      return volunteers;
+    }
+    
+    return volunteers.filter((volunteer) =>
+      volunteer.helpCategories.some(c => c.name.toLowerCase() === this.selectedCategory.toLowerCase())
+    );
   }
 }

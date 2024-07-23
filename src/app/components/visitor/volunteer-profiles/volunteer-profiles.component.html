@@ -2,7 +2,7 @@
     <div class="my-5">
         <h2 i18n>Volunteer profiles: <span class="text-success">choose your volunteer</span></h2>
 
-        <div class="mb-3">
+        <div class="mb-2 mt-5 mr-5">
             <select (change)="onSortOrderChange($event)" class="form-select">
               <option value="asc" [selected]="sortOrder === 'asc'">Sort by Volunteer's Registration Date (Old is gold)</option>
               <option value="desc" [selected]="sortOrder === 'desc'">Sort by Volunteer's Registration Date (Newcomers first)</option>
@@ -11,8 +11,13 @@
 
         <div class="row align-items-stretch my-5">
             <ng-container *ngIf="volunteers$ | async as volunteers">
+                <div class="mb-5 px-3 align-items-stretch">
+                    <p-dropdown [options]="uniqueCategories" [(ngModel)]="selectedCategory"  [showClear]="false" placeholder="Select volunteer's help category"></p-dropdown>
+                    <button class = "btn btn-outline-secondary ml-2" (click)="selectedCategory = ''" i18n>Clear filter</button>
+                </div>
+
                 <div class="row">
-                    <div class="col-md-4 mb-4" *ngFor="let volunteer of volunteers">
+                    <div class="col-md-4 mb-4" *ngFor="let volunteer of filterVolunteers(volunteers)">
                         <div class="card align-items-center px-1 py-4">
                             <img class="rounded-circle thumb" [src]="volunteer.user?.avatarUrl" alt='volunteer.nickname'>
                             <h3 class="text-primary text-center">{{volunteer.user?.name}} <br>
