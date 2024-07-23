@@ -2,19 +2,37 @@
     <div class="my-5">
         <h2 i18n>Volunteer profiles: <span class="text-success">choose your volunteer</span></h2>
 
+        <div class="mb-3">
+            <select (change)="onSortOrderChange($event)" class="form-select">
+              <option value="asc" [selected]="sortOrder === 'asc'">Sort by Volunteer's Registration Date (Old is gold)</option>
+              <option value="desc" [selected]="sortOrder === 'desc'">Sort by Volunteer's Registration Date (Newcomers first)</option>
+            </select>
+          </div>
+
         <div class="row align-items-stretch my-5">
             <ng-container *ngIf="volunteers$ | async as volunteers">
-                <div class="card-deck">
-                    <div class="card align-items-center p-4" *ngFor="let volunteer of volunteers">
-                        
+                <div class="row">
+                    <div class="col-md-4 mb-4" *ngFor="let volunteer of volunteers">
+                        <div class="card align-items-center px-1 py-4">
                             <img class="rounded-circle thumb" [src]="volunteer.user?.avatarUrl" alt='volunteer.nickname'>
-                            <h3 class="text-primary">{{volunteer.user?.name}} 
-                            <span class="text-success"> ({{volunteer.nickname}}) </span></h3>
-
-                            <h6 class="card-subtitle mb-2 text-muted" i18n> Active since {{volunteer.user?.registerDate | date}}</h6>
-                            
-                            <p>{{volunteer.bankLink}}, {{volunteer.shortInfo}}</p>
-                            
+                            <h3 class="text-primary text-center">{{volunteer.user?.name}} <br>
+                                <span class="text-success"> ({{volunteer.nickname}}) </span>
+                            </h3>
+                            <div class="my-2">
+                                <ng-container *ngIf="volunteer.helpCategories.length > 0 else noReports">
+                                    <ng-container *ngFor="let category of volunteer?.helpCategories">
+                                        <span class="badge bg-success mx-1 my-1">{{category.name}}</span>
+                                    </ng-container>
+                                </ng-container>
+                                <ng-template #noReports>
+                                    <span class="badge bg-danger mx-1 my-1" i18n>No reports made</span>
+                                </ng-template>
+                            </div>
+                            <br>
+                            <h6 class="card-subtitle mb-2 text-muted font-italic" i18n> Active since {{volunteer.user?.registerDate | date}}</h6>
+                            <p>{{volunteer.shortInfo}}</p>
+                            <a [routerLink]="['/volunteer-profile', volunteer.id]" class="btn btn-success my-2" i18n>Read more</a>
+                        </div>
                     </div>
                 </div>
             </ng-container>
@@ -23,5 +41,3 @@
 </div>
 
 <div class="divider"></div>
-
-
