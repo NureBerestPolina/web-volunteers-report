@@ -24,7 +24,7 @@ const routes: Routes = [
     component: VolunteerProfilesComponent,
   },
   {
-    path: 'volunteer-profiles/:id',
+    path: 'volunteer-profile/:id',
     component: DetailedVolunteerProfileComponent,
   }
 ];
