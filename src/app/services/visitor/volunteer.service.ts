@@ -6,6 +6,7 @@ import { Observable, of } from 'rxjs';
 import { VolunteerProfile } from '../../models/dtos/volunteer-profile.model';
 import { environment } from '../../../environments/environment';
 import { HttpClient } from '@angular/common/http';
+import { VolunteerStatisticsProfile } from '../../models/dtos/volunteer-statistics-profile.model';
 
 @Injectable({
   providedIn: 'root'
@@ -33,5 +34,9 @@ export class VolunteerService extends ODataServiceBase<Volunteer> {
 
   getVolunteerProfiles(): Observable<VolunteerProfile[]> {
     return this.http.get<VolunteerProfile[]>(`${environment.apiBaseUrl}/VolunteerProfiles`, {});
+  }
+
+  getVolunteerStatisticsProfile(id: string): Observable<VolunteerStatisticsProfile> {
+    return this.http.get<VolunteerStatisticsProfile>(`${environment.apiBaseUrl}/VolunteerStatisticsProfile/${id}`, {});
   }
 }
