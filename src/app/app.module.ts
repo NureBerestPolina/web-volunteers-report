@@ -35,6 +35,8 @@ import { HomeComponent } from './components/public/home/home.component';
 import { NotFoundComponent } from './components/common/not-found/not-found.component';
 import { VolunteerProfilesComponent } from './components/visitor/volunteer-profiles/volunteer-profiles.component';
 import { DetailedVolunteerProfileComponent } from './components/visitor/detailed-volunteer-profile/detailed-volunteer-profile.component';
+import { DetailedVolunteerStatisticsComponent } from './components/visitor/detailed-volunteer-statistics/detailed-volunteer-statistics/detailed-volunteer-statistics.component';
+import { NgApexchartsModule } from 'ng-apexcharts';
 
 registerLocaleData(localeUk);
 
@@ -48,6 +50,7 @@ registerLocaleData(localeUk);
     NotFoundComponent,
     VolunteerProfilesComponent,
     DetailedVolunteerProfileComponent,
+    DetailedVolunteerStatisticsComponent,
   ],
   imports: [
     BrowserModule,
@@ -56,6 +59,7 @@ registerLocaleData(localeUk);
     FormsModule,
     HttpClientModule,
     RouterModule,
+    NgApexchartsModule,
     InputTextModule,
     InputTextareaModule,
     PasswordModule,

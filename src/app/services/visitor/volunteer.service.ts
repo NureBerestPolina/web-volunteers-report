@@ -7,6 +7,7 @@ import { VolunteerProfile } from '../../models/dtos/volunteer-profile.model';
 import { environment } from '../../../environments/environment';
 import { HttpClient } from '@angular/common/http';
 import { VolunteerStatisticsProfile } from '../../models/dtos/volunteer-statistics-profile.model';
+import { CategoryCost } from '../../models/dtos/category-cost.model';
 
 @Injectable({
   providedIn: 'root'
@@ -38,5 +39,9 @@ export class VolunteerService extends ODataServiceBase<Volunteer> {
 
   getVolunteerStatisticsProfile(id: string): Observable<VolunteerStatisticsProfile> {
     return this.http.get<VolunteerStatisticsProfile>(`${environment.apiBaseUrl}/VolunteerStatisticsProfile/${id}`, {});
+  }
+
+  getVolunteerCostCategories(id: string): Observable<CategoryCost[]> {
+    return this.http.get<CategoryCost[]>(`${environment.apiBaseUrl}/VolunteerSpendingsStatistics/${id}`, {});
   }
 }

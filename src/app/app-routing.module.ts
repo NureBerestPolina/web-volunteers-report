@@ -5,6 +5,7 @@ import { NotFoundComponent } from './components/common/not-found/not-found.compo
 import { LoginComponent } from './components/public/login/login.component';
 import { VolunteerProfilesComponent } from './components/visitor/volunteer-profiles/volunteer-profiles.component';
 import { DetailedVolunteerProfileComponent } from './components/visitor/detailed-volunteer-profile/detailed-volunteer-profile.component';
+import { DetailedVolunteerStatisticsComponent } from './components/visitor/detailed-volunteer-statistics/detailed-volunteer-statistics/detailed-volunteer-statistics.component';
 
 const routes: Routes = [
   {
@@ -26,6 +27,10 @@ const routes: Routes = [
   {
     path: 'volunteer-profile/:id',
     component: DetailedVolunteerProfileComponent,
+  },
+  {
+    path: 'detailed-volunteer-statistics/:id',
+    component: DetailedVolunteerStatisticsComponent,
   }
 ];
 

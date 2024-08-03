@@ -31,7 +31,7 @@ export class VolunteerProfilesComponent {
       map(volunteers => this.sortVolunteers(volunteers))
     );
     this.volunteers$.subscribe(volunteers => {
-      // Extract unique categories from goods
+      // Extract unique categories 
       const categories = new Set<string>();
       volunteers.forEach(volunteer => {
         volunteer.helpCategories.forEach(category => {
@@ -60,7 +60,7 @@ export class VolunteerProfilesComponent {
     if (this.selectedCategory === '') {
       return volunteers;
     }
-    
+
     return volunteers.filter((volunteer) =>
       volunteer.helpCategories.some(c => c.name.toLowerCase() === this.selectedCategory.toLowerCase())
     );

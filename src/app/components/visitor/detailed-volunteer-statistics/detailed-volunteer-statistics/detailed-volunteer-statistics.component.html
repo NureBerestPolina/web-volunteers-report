@@ -1,0 +1,18 @@
+<div class="container my-5">
+    <div class="text-center mb-5">
+        <h2 i18n>Detailed statistics of volunteer's spendings by categories:</h2>
+
+        <div id="chart" class="font-bold">
+            <apx-chart
+                [series]="chartOptions.series || []"
+                [chart]="chartOptions.chart"
+                [labels]="chartOptions.labels"
+                [responsive]="chartOptions.responsive || []"
+                [legend]="chartOptions.legend"
+                >
+            </apx-chart>
+        </div>
+    </div>
+</div>
+
+<div class="divider"></div>
