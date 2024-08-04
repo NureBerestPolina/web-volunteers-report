@@ -1,6 +1,17 @@
-<div class="container my-5">
-    <div class="text-center mb-5">
-        <h2 i18n>Detailed statistics of volunteer's spendings by categories:</h2>
+<div class="container mt-5">
+    <div class="text-center mb-1">
+        <h2 class="text-center" i18n>Detailed statistics of volunteer's spendings for<br>{{profile?.user?.name}}</h2>
+
+        <div class="row mt-4 text-center">
+            <div class="col-sm-6 mb-3 mb-sm-0">
+                <h2 class="display-5 fw-bold text-success">{{profile?.reportsCount}}</h2>
+                <p i18n>Total number of reports in the system</p>
+            </div>
+            <div class="col-sm-6">
+                <h2 class="display-5 fw-bold text-success">{{profile?.totalCostUsd}} $</h2>
+                <p i18n>Total cost of provided help</p>
+            </div>
+        </div>
 
         <div id="chart" class="font-bold">
             <apx-chart

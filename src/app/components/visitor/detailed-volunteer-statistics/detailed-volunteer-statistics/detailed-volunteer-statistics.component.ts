@@ -11,6 +11,7 @@ import { Observable, Subscription } from 'rxjs';
 import { CategoryCost } from '../../../../models/dtos/category-cost.model';
 import { VolunteerService } from '../../../../services/visitor/volunteer.service';
 import { ActivatedRoute, Router } from '@angular/router';
+import { VolunteerStatisticsProfile } from '../../../../models/dtos/volunteer-statistics-profile.model';
 
 export type ChartOptions = {
   series: ApexNonAxisChartSeries;
@@ -30,13 +31,16 @@ export class DetailedVolunteerStatisticsComponent implements OnInit, OnDestroy{
   public chartOptions: Partial<ChartOptions>;
 
   id: string | null = null;
+  profile?: VolunteerStatisticsProfile;
   routeSubscription?: Subscription;
   statsSubscription?: Subscription;
+  profileSubscription?: Subscription;
   statistics$?: Observable<CategoryCost[]>;
 
   ngOnDestroy(): void {
     this.routeSubscription?.unsubscribe();
     this.statsSubscription?.unsubscribe();
+    this.profileSubscription?.unsubscribe();
   }
 
   constructor(
@@ -56,7 +60,7 @@ export class DetailedVolunteerStatisticsComponent implements OnInit, OnDestroy{
           breakpoint: 800,
           options: {
             chart: {
-              width: 500,
+              width: 450,
             },
             legend: {
               position: 'bottom',
@@ -66,7 +70,7 @@ export class DetailedVolunteerStatisticsComponent implements OnInit, OnDestroy{
         },
       ],
       legend: {
-        position: 'right',
+        position: 'top',
         fontSize: '20px',
         fontFamily: 'Arial, sans-serif'
       }
@@ -90,6 +94,19 @@ export class DetailedVolunteerStatisticsComponent implements OnInit, OnDestroy{
                 });
 
                   console.log(this.chartOptions);
+                } else {
+                  console.error(`Volunteer with id: ${this.id} is not found!`);
+                }
+              },
+            });
+
+            this.profileSubscription = this.volunteerService
+            .getVolunteerStatisticsProfile(this.id)
+            .subscribe({
+              next: (response) => {
+                if (response) {
+                  this.profile = response;
+                  console.log(this.profile);
                 } else {
                   console.error(`Volunteer with id: ${this.id} is not found!`);
                 }
