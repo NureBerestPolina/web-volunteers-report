@@ -13,16 +13,23 @@
             </div>
         </div>
 
-        <div id="chart" class="font-bold">
-            <apx-chart
-                [series]="chartOptions.series || []"
-                [chart]="chartOptions.chart"
-                [labels]="chartOptions.labels"
-                [responsive]="chartOptions.responsive || []"
-                [legend]="chartOptions.legend"
-                >
-            </apx-chart>
-        </div>
+        <ng-container *ngIf="chartOptions.labels.length > 1 else noReportsMade">
+            <div id="chart" class="font-bold">
+                <apx-chart
+                    [series]="chartOptions.series || []"
+                    [chart]="chartOptions.chart"
+                    [labels]="chartOptions.labels"
+                    [responsive]="chartOptions.responsive || []"
+                    [legend]="chartOptions.legend"
+                    >
+                </apx-chart>
+            </div>
+        </ng-container>
+
+        <ng-template #noReportsMade>
+            <h4 class="text-danger my-3" i18n>Statistics can't be counted: {{profile?.user?.name}} made no reports in the system yet 👀</h4>
+        </ng-template>
+        
     </div>
 </div>
 
