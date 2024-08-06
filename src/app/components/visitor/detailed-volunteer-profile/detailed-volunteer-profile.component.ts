@@ -3,11 +3,15 @@ import { VolunteerStatisticsProfile } from '../../../models/dtos/volunteer-stati
 import { Subscription } from 'rxjs';
 import { ActivatedRoute, Router } from '@angular/router';
 import { VolunteerService } from '../../../services/visitor/volunteer.service';
+import { InputTextareaModule } from 'primeng/inputtextarea';
+import { FloatLabelModule } from 'primeng/floatlabel';
+import { InputTextModule } from 'primeng/inputtext';
 
 @Component({
   selector: 'app-detailed-volunteer-profile',
   templateUrl: './detailed-volunteer-profile.component.html',
-  styleUrl: './detailed-volunteer-profile.component.css'
+  styleUrl: './detailed-volunteer-profile.component.css',
+  providers: [InputTextareaModule, FloatLabelModule, InputTextModule],
 })
 export class DetailedVolunteerProfileComponent {
   id: string | null = null;

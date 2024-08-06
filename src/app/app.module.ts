@@ -25,6 +25,7 @@ import { StyleClassModule } from 'primeng/styleclass';
 import { ButtonModule } from 'primeng/button';
 import { DropdownModule } from 'primeng/dropdown';
 import { CheckboxModule } from 'primeng/checkbox';
+import { FloatLabelModule } from 'primeng/floatlabel';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/common/header/header.component';
@@ -75,6 +76,7 @@ registerLocaleData(localeUk);
     MessagesModule,
     StyleClassModule,
     ButtonModule,
+    FloatLabelModule,
     ODataModule.forRoot({
       config: {
         serviceRootUrl: `${environment.apiBaseUrl}/odata/`
