@@ -39,6 +39,7 @@ import { DetailedVolunteerProfileComponent } from './components/visitor/detailed
 import { DetailedVolunteerStatisticsComponent } from './components/visitor/detailed-volunteer-statistics/detailed-volunteer-statistics/detailed-volunteer-statistics.component';
 import { NgApexchartsModule } from 'ng-apexcharts';
 import { MakeAccusationComponent } from './components/visitor/make-accusation/make-accusation.component';
+import { ReachedAccusationLimitationComponent } from './components/visitor/reached-accusation-limitation/reached-accusation-limitation.component';
 
 registerLocaleData(localeUk);
 
@@ -54,6 +55,7 @@ registerLocaleData(localeUk);
     DetailedVolunteerProfileComponent,
     DetailedVolunteerStatisticsComponent,
     MakeAccusationComponent,
+    ReachedAccusationLimitationComponent,
   ],
   imports: [
     BrowserModule,

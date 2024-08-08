@@ -49,7 +49,9 @@ export class MakeAccusationComponent {
           ]);
         },
         error: (error) => {
-          console.error('error', error);
+          this.router.navigate([
+            '/reached-accusation-limit',
+          ]);
         },
       });
     } catch (error) {
