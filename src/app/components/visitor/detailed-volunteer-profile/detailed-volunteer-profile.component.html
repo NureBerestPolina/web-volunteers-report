@@ -46,3 +46,37 @@
 <button class="accuse-button" [routerLink]="['/accuse-volunteer', id]" i18n>Report suspicious profile</button>
 
 <div class="divider"></div>
+
+<ng-container *ngIf="reports$ | async as reports">
+    <ng-container *ngIf="reports.length > 0 else noReports">
+        <div class="col-md-12 mb-3" *ngFor="let report of reports">
+            <div class="card">
+                <div class="row no-gutters report">
+                <div class="col-md-4">
+                    <img [src]="report?.photoUrl" class="card-img" alt="Report Image">
+                </div>
+                <div class="col-md-8">
+                    <div class="card-body">
+                    <p class="card-text fw-bold text-success">Total cost of the provided help: {{countTotalUsd(report)}} $</p>
+                    <p class="card-text fw-bold"><i class="bi bi-geo-alt-fill"></i> {{report.direction}}</p>
+                    <p class="card-text  mt-2">{{report.description}}</p>
+                    <p class="card-text" i18n><small class="text-muted">
+                        Last updated {{report.modified | date}} 
+                        <br>Created {{report.created | date}}</small></p>
+                    </div>
+                </div>
+                </div>
+            </div>
+
+            <div class="divider"></div>
+        </div>
+    </ng-container>
+</ng-container>
+
+<ng-template #noReports>
+    <div class="container text-center">
+        <h4 class="text-danger my-3" i18n>No reports made by the volunteer yet 👀</h4>
+    </div>
+
+    <div class="divider"></div>
+</ng-template>

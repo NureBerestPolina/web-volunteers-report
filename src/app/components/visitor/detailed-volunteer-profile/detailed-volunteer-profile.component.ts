@@ -1,11 +1,13 @@
 import { Component } from '@angular/core';
 import { VolunteerStatisticsProfile } from '../../../models/dtos/volunteer-statistics-profile.model';
-import { Subscription } from 'rxjs';
+import { Observable, Subscription } from 'rxjs';
 import { ActivatedRoute, Router } from '@angular/router';
 import { VolunteerService } from '../../../services/visitor/volunteer.service';
 import { InputTextareaModule } from 'primeng/inputtextarea';
 import { FloatLabelModule } from 'primeng/floatlabel';
 import { InputTextModule } from 'primeng/inputtext';
+import { ReportService } from '../../../services/visitor/report.service';
+import { Report } from '../../../models/report.model';
 
 @Component({
   selector: 'app-detailed-volunteer-profile',
@@ -16,6 +18,7 @@ import { InputTextModule } from 'primeng/inputtext';
 export class DetailedVolunteerProfileComponent {
   id: string | null = null;
   profile?: VolunteerStatisticsProfile;
+  reports$?: Observable<Report[]>;
 
   routeSubscription?: Subscription;
   getProfileSubscription?: Subscription;
@@ -23,12 +26,17 @@ export class DetailedVolunteerProfileComponent {
   constructor(
     private route: ActivatedRoute,
     private volunteerService: VolunteerService,
+    private reportService: ReportService,
     private router: Router
   ) {}
 
   ngOnDestroy(): void {
     this.routeSubscription?.unsubscribe();
     this.getProfileSubscription?.unsubscribe();
+  }
+
+  countTotalUsd(report: Report): number {
+    return report.reportDetails.reduce((total, item) => total + item.costUsd, 0);
   }
 
   ngOnInit(): void {
@@ -50,6 +58,9 @@ export class DetailedVolunteerProfileComponent {
                 }
               },
             });
+
+          this.reports$ = this.reportService.getVolunteerReports(this.id);
+          console.log(this.reports$);
         }
       },
     });
