@@ -33,6 +33,15 @@ export class VolunteerService extends ODataServiceBase<Volunteer> {
       .pipe(this.mapODataEntities);
   }
 
+  getAllRegisteredVolunteers(): Observable<Volunteer[]> {
+    return this.ODataService.entities()
+      .query((q) => {
+        q.expand('user');
+      })
+      .fetch()
+      .pipe(this.mapODataEntities);
+  }
+
   getVolunteerProfiles(): Observable<VolunteerProfile[]> {
     return this.http.get<VolunteerProfile[]>(`${environment.apiBaseUrl}/VolunteerProfiles`, {});
   }

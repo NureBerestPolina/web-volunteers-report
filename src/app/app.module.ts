@@ -40,6 +40,9 @@ import { DetailedVolunteerStatisticsComponent } from './components/visitor/detai
 import { NgApexchartsModule } from 'ng-apexcharts';
 import { MakeAccusationComponent } from './components/visitor/make-accusation/make-accusation.component';
 import { ReachedAccusationLimitationComponent } from './components/visitor/reached-accusation-limitation/reached-accusation-limitation.component';
+import { VolunteersManagementComponent } from './components/admin/volunteers-management/volunteers-management.component';
+import { MessageService } from 'primeng/api';
+import { RippleModule } from 'primeng/ripple';
 
 registerLocaleData(localeUk);
 
@@ -56,6 +59,7 @@ registerLocaleData(localeUk);
     DetailedVolunteerStatisticsComponent,
     MakeAccusationComponent,
     ReachedAccusationLimitationComponent,
+    VolunteersManagementComponent,
   ],
   imports: [
     BrowserModule,
@@ -65,6 +69,7 @@ registerLocaleData(localeUk);
     HttpClientModule,
     RouterModule,
     NgApexchartsModule,
+    RippleModule,
     InputTextModule,
     InputTextareaModule,
     PasswordModule,

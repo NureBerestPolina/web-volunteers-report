@@ -1,0 +1,25 @@
+table>:not(caption)>*>* {
+    padding: 0.5rem 0.5rem;
+    color: var(--bs-table-color-state, var(--bs-table-color-type, var(--bs-table-color)));
+    background-color: transparent;
+    border-bottom-width: var(--bs-border-width);
+    box-shadow: inset 0 0 0 9999px var(--bs-table-bg-state, var(--bs-table-bg-type, var(--bs-table-accent-bg)));
+}
+
+.divider {
+    width: 100%;
+    height: 2rem;
+    background-color: rgba(0, 0, 0, .1);
+    border: solid rgba(0, 0, 0, .15);
+    border-width: 1px 0;
+    box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+}
+
+p-toast {
+    min-width: 300px;
+    display: block;
+    background-color: #4caf50;
+    color: #fff;
+    border-radius: 4px;
+    font-weight: bold;
+}

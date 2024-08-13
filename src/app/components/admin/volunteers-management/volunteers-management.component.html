@@ -1,0 +1,60 @@
+<p-toast></p-toast>
+
+<div class="container">
+
+    <h1 class="mt-3" i18n>The volunteers registered in the system:</h1>
+
+    <ng-container *ngIf="volunteers$ | async as volunteers">
+        <ng-container *ngIf="volunteers.length > 0; else noRegisteredVolunteers">
+            <table class="table mt-3 table-bordered">
+                <thead>
+                    <tr>
+                        <th i18n>Volunteer</th>
+                        <th i18n>Short Info</th>
+                        <th i18n>Registered on</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let volunteer of volunteers" [ngStyle]="{'background': getStateColor(volunteer?.isBlocked, volunteer?.isHidden)}">
+                        <td>{{volunteer.user?.name}} <br>
+                            {{volunteer.nickname}} <br>
+                            <i>{{volunteer.user?.email}}</i></td>
+                        <td>{{volunteer.shortInfo}}</td>
+                        <td>{{volunteer.user?.registerDate | date }}</td>
+                        <td>
+                            <div class="d-flex justify-content-around">
+                                <ng-container *ngIf="volunteer?.isHidden; else showHideAction">
+                                    <button (click)="show(volunteer)"
+                                    severity="success" pButton pRipple class="btn btn-primary" i18n>Show donation link</button>
+                                </ng-container>
+                                <ng-template #showHideAction>
+                                    <button (click)="hide(volunteer)"
+                                    severity="success" pButton pRipple class="btn btn-warning" i18n>Hide donation link</button>
+                                </ng-template>
+
+                                <ng-container *ngIf="volunteer?.isBlocked; else showBlockAction">
+                                    <button (click)="unblock(volunteer)" pButton pRipple class="btn btn-success" i18n>Unblock
+                                        volunteer</button>
+                                </ng-container>
+                                <ng-template #showBlockAction>
+                                    <button (click)="block(volunteer)" pButton pRipple class="btn btn-danger" i18n>Block volunteer</button>
+                                </ng-template>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </ng-container>
+    </ng-container>
+
+    <ng-template #noRegisteredVolunteers>
+        <div class="alert alert-info" role="alert" i18n>
+            There are no volunteers registered yet.
+        </div>
+    </ng-template>
+</div>
+
+<div class="divider"></div>
+
+

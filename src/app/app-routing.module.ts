@@ -8,6 +8,7 @@ import { DetailedVolunteerProfileComponent } from './components/visitor/detailed
 import { DetailedVolunteerStatisticsComponent } from './components/visitor/detailed-volunteer-statistics/detailed-volunteer-statistics/detailed-volunteer-statistics.component';
 import { MakeAccusationComponent } from './components/visitor/make-accusation/make-accusation.component';
 import { ReachedAccusationLimitationComponent } from './components/visitor/reached-accusation-limitation/reached-accusation-limitation.component';
+import { VolunteersManagementComponent } from './components/admin/volunteers-management/volunteers-management.component';
 
 const routes: Routes = [
   {
@@ -41,6 +42,10 @@ const routes: Routes = [
   {
     path: 'detailed-volunteer-statistics/:id',
     component: DetailedVolunteerStatisticsComponent,
+  },
+  {
+    path: 'admin/volunteers-management',
+    component: VolunteersManagementComponent,
   }
 ];
 
