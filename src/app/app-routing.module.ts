@@ -9,6 +9,7 @@ import { DetailedVolunteerStatisticsComponent } from './components/visitor/detai
 import { MakeAccusationComponent } from './components/visitor/make-accusation/make-accusation.component';
 import { ReachedAccusationLimitationComponent } from './components/visitor/reached-accusation-limitation/reached-accusation-limitation.component';
 import { VolunteersManagementComponent } from './components/admin/volunteers-management/volunteers-management.component';
+import { DonationComponent } from './components/visitor/donation/donation.component';
 
 const routes: Routes = [
   {
@@ -30,6 +31,10 @@ const routes: Routes = [
   {
     path: 'volunteer-profiles',
     component: VolunteerProfilesComponent,
+  },
+  {
+    path: 'donate/:id',
+    component: DonationComponent,
   },
   {
     path: 'volunteer-profile/:id',
