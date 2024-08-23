@@ -10,6 +10,7 @@ import { MakeAccusationComponent } from './components/visitor/make-accusation/ma
 import { ReachedAccusationLimitationComponent } from './components/visitor/reached-accusation-limitation/reached-accusation-limitation.component';
 import { VolunteersManagementComponent } from './components/admin/volunteers-management/volunteers-management.component';
 import { DonationComponent } from './components/visitor/donation/donation.component';
+import { AccusationsManagementComponent } from './components/admin/accusations-management/accusations-management.component';
 
 const routes: Routes = [
   {
@@ -51,6 +52,10 @@ const routes: Routes = [
   {
     path: 'admin/volunteers-management',
     component: VolunteersManagementComponent,
+  },
+  {
+    path: 'admin/accusations-management',
+    component: AccusationsManagementComponent,
   }
 ];
 

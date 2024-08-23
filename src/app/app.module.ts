@@ -44,6 +44,7 @@ import { VolunteersManagementComponent } from './components/admin/volunteers-man
 import { MessageService } from 'primeng/api';
 import { RippleModule } from 'primeng/ripple';
 import { DonationComponent } from './components/visitor/donation/donation.component';
+import { AccusationsManagementComponent } from './components/admin/accusations-management/accusations-management.component';
 
 registerLocaleData(localeUk);
 
@@ -62,6 +63,7 @@ registerLocaleData(localeUk);
     ReachedAccusationLimitationComponent,
     VolunteersManagementComponent,
     DonationComponent,
+    AccusationsManagementComponent,
   ],
   imports: [
     BrowserModule,

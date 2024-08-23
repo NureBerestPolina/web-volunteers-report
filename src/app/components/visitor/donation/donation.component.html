@@ -5,10 +5,10 @@
             <ng-container *ngIf="volunteer?.isHidden; else donationLink">
                 <div class="sad-face">☹️</div>
                 <h3 class="mt-3" i18n>Sorry to inform you ...</h3>
-                <p i18n>... that this volunteer was accused in having a suspicious profile by an another user of our
+                <p i18n>... that this volunteer was accused in having a suspicious profile by another user of the
                     website.<br>
-                    We are investigating the issue, our administrators keep an eye on this. <br>
-                    For now the donaion link of the volunteer is hidden. <br>
+                    We are investigating the issue. <br>
+                    For now the donation link of the volunteer is hidden. <br>
                     Please, choose an another volunteer to donate to or come back later.
                 </p>
                 <a [routerLink]="['/volunteer-profiles']" class="btn btn-lg btn-primary mt-3" i18n>Return to Volunteer

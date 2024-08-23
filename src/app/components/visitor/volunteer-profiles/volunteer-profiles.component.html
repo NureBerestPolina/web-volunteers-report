@@ -4,8 +4,8 @@
 
         <div class="mb-2 mt-5 mr-5">
             <select (change)="onSortOrderChange($event)" class="form-select">
-              <option value="asc" [selected]="sortOrder === 'asc'">Sort by Volunteer's Registration Date (Old is gold)</option>
-              <option value="desc" [selected]="sortOrder === 'desc'">Sort by Volunteer's Registration Date (Newcomers first)</option>
+              <option value="asc" [selected]="sortOrder === 'asc'" i18n>Sort by Volunteer's Registration Date (Old is gold)</option>
+              <option value="desc" [selected]="sortOrder === 'desc'" i18n>Sort by Volunteer's Registration Date (Newcomers first)</option>
             </select>
           </div>
 
