@@ -52,4 +52,8 @@ export class VolunteerService extends ODataServiceBase<Volunteer> {
   getVolunteerCostCategories(id: string): Observable<CategoryCost[]> {
     return this.http.get<CategoryCost[]>(`${environment.apiBaseUrl}/VolunteerSpendingsStatistics/${id}`, {});
   }
+
+  block(id: string): Observable<void> {
+    return this.http.put<void>(`${environment.apiBaseUrl}/block/${id}`, {});
+  }
 }

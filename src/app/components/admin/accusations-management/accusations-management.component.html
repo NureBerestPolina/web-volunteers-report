@@ -26,10 +26,10 @@
                             <p>{{accusation.reasonDescription}}</p>
                            
                             <hr class="mb-3 mx-0 border-top-1 border-none surface-border mt-auto" />
-                            <button class="p-3 w-full mt-auto btn btn-success">This volunteer is OK</button>
+                            <button class="p-3 w-full mt-auto btn btn-success" (click)="rejectAccusation(accusation)">This volunteer is OK</button>
                             
                             <hr class="mb-3 mx-0 border-top-1 border-none surface-border mt-auto" />
-                            <button class="p-3 w-full mt-auto btn btn-danger">Block volunteer</button>
+                            <button class="p-3 w-full mt-auto btn btn-danger" (click)="acceptAccusation(accusation)">Block volunteer</button>
                         </div>
                     </div>
                 </div>
