@@ -45,6 +45,8 @@ import { MessageService } from 'primeng/api';
 import { RippleModule } from 'primeng/ripple';
 import { DonationComponent } from './components/visitor/donation/donation.component';
 import { AccusationsManagementComponent } from './components/admin/accusations-management/accusations-management.component';
+import { ReportCategoriesManagementComponent } from './components/admin/report-categories-management/report-categories-management.component';
+import { AddReportCategoryComponent } from './components/admin/add-report-category/add-report-category.component';
 
 registerLocaleData(localeUk);
 
@@ -64,6 +66,8 @@ registerLocaleData(localeUk);
     VolunteersManagementComponent,
     DonationComponent,
     AccusationsManagementComponent,
+    ReportCategoriesManagementComponent,
+    AddReportCategoryComponent,
   ],
   imports: [
     BrowserModule,

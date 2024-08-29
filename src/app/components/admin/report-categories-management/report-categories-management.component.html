@@ -1,0 +1,35 @@
+<div class="container">
+
+    <h2 class="mt-3" i18n>Categories of help / humanitarian aid, available to report in the system</h2>
+
+    <div class="d-flex justify-content-end mt-4">
+        <a [routerLink]="['/admin/categories-management/add']" class="btn btn-warning" i18n>Add a category</a>
+    </div>
+
+    <ng-container *ngIf="categories$ | async as categories">
+
+        <table class="table mt-3 table-bordered table-striped">
+            <thead>
+                <tr>
+                    <th i18n>Category</th>
+                    <th i18n>Description</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let category of categories">
+                    <td>{{category.name}}</td>
+                    <td i18n>{{category.description}}, <br>
+                        created at {{category.created | date}}
+                    </td>
+                    <td class="text-center">
+                        <div (click)="deleteCategory(category)" class="btn btn-danger" i18n>Block category</div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </ng-container>
+
+</div>
+
+<div class="divider"></div>

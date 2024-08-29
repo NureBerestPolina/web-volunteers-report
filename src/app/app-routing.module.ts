@@ -11,6 +11,8 @@ import { ReachedAccusationLimitationComponent } from './components/visitor/reach
 import { VolunteersManagementComponent } from './components/admin/volunteers-management/volunteers-management.component';
 import { DonationComponent } from './components/visitor/donation/donation.component';
 import { AccusationsManagementComponent } from './components/admin/accusations-management/accusations-management.component';
+import { ReportCategoriesManagementComponent } from './components/admin/report-categories-management/report-categories-management.component';
+import { AddReportCategoryComponent } from './components/admin/add-report-category/add-report-category.component';
 
 const routes: Routes = [
   {
@@ -56,6 +58,14 @@ const routes: Routes = [
   {
     path: 'admin/accusations-management',
     component: AccusationsManagementComponent,
+  },
+  {
+    path: 'admin/categories-management',
+    component: ReportCategoriesManagementComponent,
+  },
+  {
+    path: 'admin/catergories-management/add',
+    component: AddReportCategoryComponent,
   }
 ];
 
