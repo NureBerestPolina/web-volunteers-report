@@ -64,7 +64,7 @@ const routes: Routes = [
     component: ReportCategoriesManagementComponent,
   },
   {
-    path: 'admin/catergories-management/add',
+    path: 'admin/add-category',
     component: AddReportCategoryComponent,
   }
 ];

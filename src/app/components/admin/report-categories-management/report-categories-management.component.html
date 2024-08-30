@@ -3,7 +3,7 @@
     <h2 class="mt-3" i18n>Categories of help / humanitarian aid, available to report in the system</h2>
 
     <div class="d-flex justify-content-end mt-4">
-        <a [routerLink]="['/admin/categories-management/add']" class="btn btn-warning" i18n>Add a category</a>
+        <a [routerLink]="['/admin/add-category']" class="btn btn-warning" i18n>Add a category</a>
     </div>
 
     <ng-container *ngIf="categories$ | async as categories">
@@ -32,4 +32,4 @@
 
 </div>
 
-<div class="divider"></div>
+<div class="divider"></div> 
