@@ -55,7 +55,7 @@ export class DetailedVolunteerProfileComponent {
                   console.log(this.profile);
                 } else {
                   console.error(`Volunteer with id: ${this.id} is not found!`);
-                }
+                }   
               },
             });
 
