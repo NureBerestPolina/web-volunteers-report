@@ -28,4 +28,14 @@ export class ReportService extends ODataServiceBase<Report> {
       .fetch()
       .pipe(this.mapODataEntities);
   }
+
+  getAllReports(): Observable<Report[]> {
+    return this.ODataService.entities()
+      .query((q) => {
+        q.expand('reportDetails, volunteer');
+        q.filter(({ e }) => e().eq('isDeleted', false, 'none'));
+      })
+      .fetch()
+      .pipe(this.mapODataEntities);
+  }
 }

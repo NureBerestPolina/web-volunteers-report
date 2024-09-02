@@ -47,6 +47,7 @@ import { DonationComponent } from './components/visitor/donation/donation.compon
 import { AccusationsManagementComponent } from './components/admin/accusations-management/accusations-management.component';
 import { ReportCategoriesManagementComponent } from './components/admin/report-categories-management/report-categories-management.component';
 import { AddReportCategoryComponent } from './components/admin/add-report-category/add-report-category.component';
+import { AllReportsComponent } from './components/common/all-reports/all-reports.component';
 
 registerLocaleData(localeUk);
 
@@ -68,6 +69,7 @@ registerLocaleData(localeUk);
     AccusationsManagementComponent,
     ReportCategoriesManagementComponent,
     AddReportCategoryComponent,
+    AllReportsComponent,
   ],
   imports: [
     BrowserModule,

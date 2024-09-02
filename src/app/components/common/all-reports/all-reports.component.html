@@ -1,0 +1,51 @@
+<div class="container">
+    <div class="my-5">
+        <h2 i18n>Recent volunteer reports: <span class="text-success">choose the trustworthy</span></h2>
+
+        <div class="mb-2 mt-5">
+            <select (change)="onSortOrderChange($event)" class="form-select">
+              <option value="asc" [selected]="sortOrder === 'asc'" i18n>Show older ones</option>
+              <option value="desc" [selected]="sortOrder === 'desc'" i18n>Show the newest</option>
+            </select>
+        </div>
+
+        <ng-container *ngIf="reports$ | async as reports">
+            <ng-container *ngIf="reports.length > 0 else noReports">
+                <div class="col-md-12 my-3" *ngFor="let report of reports">
+                    <div class="card my-2">
+                        <div class="row no-gutters report">
+                            <div class="col-md-4">
+                                <img [src]="report?.photoUrl" class="card-img" alt="Report Image">
+                            </div>
+                            <div class="col-md-8">
+                                <div class="card-body">
+                                    <p class="card-text fw-bold" i18n> Volunteer {{report.volunteer?.nickname}}</p>
+                                    <p class="card-text fw-bold text-success">Total cost of the provided help:
+                                        {{countTotalUsd(report)}} $</p>
+                                    <p class="card-text fw-bold"><i class="bi bi-geo-alt-fill"></i> {{report.direction}}
+                                    </p>
+                                    <p class="card-text  mt-2">{{report.description}}</p>
+                                    <p class="card-text" i18n><small class="text-muted">
+                                            Last updated {{report.modified | date}}
+                                            <br>Created {{report.created | date}}</small></p>
+                                </div>
+                                <a class="btn btn-success m-3" [routerLink]="['/volunteer-profile', report.volunteerId]"
+                                    i18n>See volunteer's profile</a>
+                                <ng-container *ngIf="user?.roles?.includes(role.Administrator)">
+                                    <a class="btn btn-danger m-3" (click)="delete(report.id)" i18n>Delete report</a>
+                                </ng-container>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </ng-container>
+        </ng-container>
+
+        <ng-template #noReports>
+            <div class="container text-center">
+                <h4 class="text-danger my-3" i18n>No reports made by our volunteers yet 👀</h4>
+            </div>
+        </ng-template>
+    </div>
+
+    <div class="divider"></div>

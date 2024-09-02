@@ -13,6 +13,7 @@ import { DonationComponent } from './components/visitor/donation/donation.compon
 import { AccusationsManagementComponent } from './components/admin/accusations-management/accusations-management.component';
 import { ReportCategoriesManagementComponent } from './components/admin/report-categories-management/report-categories-management.component';
 import { AddReportCategoryComponent } from './components/admin/add-report-category/add-report-category.component';
+import { AllReportsComponent } from './components/common/all-reports/all-reports.component';
 
 const routes: Routes = [
   {
@@ -34,6 +35,10 @@ const routes: Routes = [
   {
     path: 'volunteer-profiles',
     component: VolunteerProfilesComponent,
+  },
+  {
+    path: 'reports',
+    component: AllReportsComponent,
   },
   {
     path: 'donate/:id',
