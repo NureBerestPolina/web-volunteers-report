@@ -32,7 +32,7 @@
                                 <a class="btn btn-success m-3" [routerLink]="['/volunteer-profile', report.volunteerId]"
                                     i18n>See volunteer's profile</a>
                                 <ng-container *ngIf="user?.roles?.includes(role.Administrator)">
-                                    <a class="btn btn-danger m-3" (click)="delete(report.id)" i18n>Delete report</a>
+                                    <a class="btn btn-danger m-3" (click)="delete(report)" i18n>Delete report</a>
                                 </ng-container>
                             </div>
                         </div>

@@ -18,6 +18,7 @@ export class AllReportsComponent {
   sortOrder: 'asc' | 'desc' = 'asc';
 
   userSubscription$?: Subscription;
+  deleteReportSubscription?: Subscription;
   reports$?: Observable<Report[]>;
 
   constructor(
@@ -32,16 +33,29 @@ export class AllReportsComponent {
         this.user = user;
       },
     });
-    
+
     this.loadReports();
+  }
+
+  ngOnDestroy(): void {
+    this.userSubscription$?.unsubscribe();
+    this.deleteReportSubscription?.unsubscribe();
   }
 
   countTotalUsd(report: Report): number {
     return report.reportDetails.reduce((total, item) => total + item.costUsd, 0);
   }
 
-  delete(reportId: string) {
-
+  delete(report: Report) {
+    report.isDeleted = true;
+    
+    this.deleteReportSubscription = this.reportService
+      .update(report.id, report)
+      .subscribe({
+        next: (response) => {
+          this.ngOnInit();
+        },
+      });
   }
 
   loadReports(): void {
