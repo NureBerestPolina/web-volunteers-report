@@ -18,7 +18,7 @@
 
                 <div class="row">
                     <div class="col-md-4 mb-4" *ngFor="let volunteer of filterVolunteers(volunteers)">
-                        <div class="card align-items-center px-1 py-4">
+                        <div class="card align-items-center px-5 py-4">
                             <img class="rounded-circle thumb" [src]="volunteer.user?.avatarUrl" alt='volunteer.nickname'>
                             <h3 class="text-primary text-center">{{volunteer.user?.name}} <br>
                                 <span class="text-success"> ({{volunteer.nickname}}) </span>

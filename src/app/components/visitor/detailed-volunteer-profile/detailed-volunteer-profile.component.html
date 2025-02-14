@@ -20,7 +20,7 @@
 
             <div class="my-5">
                 <h6 class="text-muted font-italic" i18n>The volunteer's profile is active since {{profile?.user?.registerDate | date}} </h6>
-                <h6 class="text-muted font-italic" i18n>Last updeted on {{profile?.modified | date}} </h6>
+                <h6 class="text-muted font-italic" i18n>Last updated on {{profile?.modified | date}} </h6>
             </div>
         </div>
     </div>
@@ -49,10 +49,10 @@
 
 <ng-container *ngIf="reports$ | async as reports">
     <ng-container *ngIf="reports.length > 0 else noReports">
-        <div class="col-md-12 mb-3" *ngFor="let report of reports">
+        <div class="col-md-12 m-0 p-0" *ngFor="let report of reports">
             <div class="card">
-                <div class="row no-gutters report">
-                <div class="col-md-4">
+                <div class="row">
+                <div class="col-md-4 p-5">
                     <img [src]="report?.photoUrl" class="card-img" alt="Report Image">
                 </div>
                 <div class="col-md-8">

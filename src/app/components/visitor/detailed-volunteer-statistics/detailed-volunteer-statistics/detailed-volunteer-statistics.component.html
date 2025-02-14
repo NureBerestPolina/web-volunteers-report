@@ -13,7 +13,7 @@
             </div>
         </div>
 
-        <ng-container *ngIf="chartOptions.labels.length > 1 else noReportsMade">
+        <ng-container *ngIf="chartOptions.labels.length > 0 else noReportsMade">
             <div id="chart" class="font-bold">
                 <apx-chart
                     [series]="chartOptions.series || []"
