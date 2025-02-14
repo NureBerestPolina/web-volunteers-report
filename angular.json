@@ -4,6 +4,12 @@
   "newProjectRoot": "projects",
   "projects": {
     "volunteers-report": {
+      "i18n": {
+        "sourceLocale": "en-US",
+        "locales": {
+          "ua-UA": "src/locale/messages.ua.xlf"
+        }
+      },
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -23,6 +29,9 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
+            "localize": [
+              "ua-UA"
+            ],
             "outputPath": "dist/volunteers-report",
             "index": "src/index.html",
             "browser": "src/main.ts",
