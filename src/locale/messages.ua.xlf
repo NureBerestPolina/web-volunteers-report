@@ -281,6 +281,7 @@
       </trans-unit>
       <trans-unit id="4521668916413259119" datatype="html">
         <source> A place to change the world together <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br /&gt;"/><x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br /&gt;"/><x id="START_ITALIC_TEXT" ctype="x-i" equiv-text="&lt;i&gt;"/>Your donation - their impact!<x id="CLOSE_ITALIC_TEXT" ctype="x-i" equiv-text="&lt;/i&gt;"/></source>
+        <target> Тут ми змінюємо світ разом <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br /&gt;"/><x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br /&gt;"/><x id="START_ITALIC_TEXT" ctype="x-i" equiv-text="&lt;i&gt;"/>Твій донат - їхня можливість!<x id="CLOSE_ITALIC_TEXT" ctype="x-i" equiv-text="&lt;/i&gt;"/></target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/common/footer/footer.component.html</context>
           <context context-type="linenumber">12,15</context>
@@ -288,6 +289,7 @@
       </trans-unit>
       <trans-unit id="6284442506490785579" datatype="html">
         <source>Useful links</source>
+        <target>Корисні посилання</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/common/footer/footer.component.html</context>
           <context context-type="linenumber">21,22</context>
@@ -295,6 +297,7 @@
       </trans-unit>
       <trans-unit id="1121962291050173912" datatype="html">
         <source>About the project</source>
+        <target>Про проєкт</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/common/footer/footer.component.html</context>
           <context context-type="linenumber">24,25</context>
@@ -302,6 +305,7 @@
       </trans-unit>
       <trans-unit id="5278138713035970865" datatype="html">
         <source>Categories of help</source>
+        <target>Категорії допомоги</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/common/footer/footer.component.html</context>
           <context context-type="linenumber">32,33</context>
@@ -309,6 +313,7 @@
       </trans-unit>
       <trans-unit id="1293431484102088563" datatype="html">
         <source>Try it out</source>
+        <target>Спробуй</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/common/footer/footer.component.html</context>
           <context context-type="linenumber">35,36</context>
@@ -316,6 +321,7 @@
       </trans-unit>
       <trans-unit id="7922989125096435449" datatype="html">
         <source>Contact</source>
+        <target>Контакти</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/common/footer/footer.component.html</context>
           <context context-type="linenumber">43,44</context>
@@ -323,6 +329,7 @@
       </trans-unit>
       <trans-unit id="4813382719470194105" datatype="html">
         <source><x id="START_ITALIC_TEXT" ctype="x-i" equiv-text="&lt;i class=&quot;bi bi-geo-alt&quot;&gt;"/><x id="CLOSE_ITALIC_TEXT" ctype="x-i" equiv-text="&lt;/i&gt;"/> Kharkiv city, UA</source>
+        <source><x id="START_ITALIC_TEXT" ctype="x-i" equiv-text="&lt;i class=&quot;bi bi-geo-alt&quot;&gt;"/><x id="CLOSE_ITALIC_TEXT" ctype="x-i" equiv-text="&lt;/i&gt;"/> Місто-герой Харків, UA</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/common/footer/footer.component.html</context>
           <context context-type="linenumber">44,45</context>
@@ -338,6 +345,7 @@
       </trans-unit>
       <trans-unit id="3439256279685906367" datatype="html">
         <source> About the project</source>
+        <target> Про проєкт</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/common/header/header.component.html</context>
           <context context-type="linenumber">10,11</context>
@@ -345,6 +353,7 @@
       </trans-unit>
       <trans-unit id="8404124201504944571" datatype="html">
         <source> Admin panel </source>
+        <target> Панель адміністратора </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/common/header/header.component.html</context>
           <context context-type="linenumber">18</context>
@@ -352,6 +361,7 @@
       </trans-unit>
       <trans-unit id="8163985159801076032" datatype="html">
         <source>Manage volunteers</source>
+        <target>Керування профілями волонтерів</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/common/header/header.component.html</context>
           <context context-type="linenumber">21,22</context>
@@ -359,6 +369,7 @@
       </trans-unit>
       <trans-unit id="6050492583559648463" datatype="html">
         <source>Manage accusations</source>
+        <target>Керування скаргами</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/common/header/header.component.html</context>
           <context context-type="linenumber">23,24</context>
@@ -366,6 +377,7 @@
       </trans-unit>
       <trans-unit id="4155336927334575543" datatype="html">
         <source>Manage report categories</source>
+        <target>Керування категоріями допомоги</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/common/header/header.component.html</context>
           <context context-type="linenumber">25,26</context>
@@ -373,6 +385,7 @@
       </trans-unit>
       <trans-unit id="4670525962417351294" datatype="html">
         <source>Manage reports</source>
+        <target>Керування звітами</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/common/header/header.component.html</context>
           <context context-type="linenumber">27,28</context>
@@ -380,6 +393,7 @@
       </trans-unit>
       <trans-unit id="2653592532315618987" datatype="html">
         <source>Volunteer profiles</source>
+        <target>Профілі волонтерів</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/common/header/header.component.html</context>
           <context context-type="linenumber">33,34</context>
@@ -387,6 +401,7 @@
       </trans-unit>
       <trans-unit id="1868606282505332204" datatype="html">
         <source>Reports</source>
+        <target>Звіти</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/common/header/header.component.html</context>
           <context context-type="linenumber">34,35</context>
@@ -394,6 +409,7 @@
       </trans-unit>
       <trans-unit id="6087502755186421917" datatype="html">
         <source> Volunteer profiles</source>
+        <target> Профілі волонтерів</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/common/header/header.component.html</context>
           <context context-type="linenumber">41,42</context>
@@ -401,6 +417,7 @@
       </trans-unit>
       <trans-unit id="8070298937033237545" datatype="html">
         <source> Join</source>
+        <target> Долучитися</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/common/header/header.component.html</context>
           <context context-type="linenumber">44,45</context>
@@ -408,6 +425,7 @@
       </trans-unit>
       <trans-unit id="5034697090162819149" datatype="html">
         <source><x id="START_ITALIC_TEXT" ctype="x-i" equiv-text="&lt;i class=&quot;bi bi-person-hearts&quot;&gt;"/><x id="CLOSE_ITALIC_TEXT" ctype="x-i" equiv-text="&lt;/i&gt;"/> Log in to make impact</source>
+        <target><x id="START_ITALIC_TEXT" ctype="x-i" equiv-text="&lt;i class=&quot;bi bi-person-hearts&quot;&gt;"/><x id="CLOSE_ITALIC_TEXT" ctype="x-i" equiv-text="&lt;/i&gt;"/> Авторизуйся, щоб змінити світ</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/common/header/header.component.html</context>
           <context context-type="linenumber">51,52</context>
@@ -415,6 +433,7 @@
       </trans-unit>
       <trans-unit id="84469351437705568" datatype="html">
         <source>Hi, <x id="INTERPOLATION" equiv-text="{{user?.name}}"/>!</source>
+        <target>Привіт, <x id="INTERPOLATION" equiv-text="{{user?.name}}"/>!</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/common/header/header.component.html</context>
           <context context-type="linenumber">58,59</context>
@@ -422,6 +441,7 @@
       </trans-unit>
       <trans-unit id="491718244757075036" datatype="html">
         <source><x id="START_ITALIC_TEXT" ctype="x-i" equiv-text="&lt;i class=&quot;bi bi-person&quot;&gt;"/><x id="CLOSE_ITALIC_TEXT" ctype="x-i" equiv-text="&lt;/i&gt;"/>Log out</source>
+        <target><x id="START_ITALIC_TEXT" ctype="x-i" equiv-text="&lt;i class=&quot;bi bi-person&quot;&gt;"/><x id="CLOSE_ITALIC_TEXT" ctype="x-i" equiv-text="&lt;/i&gt;"/>Вийти з акаунту</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/common/header/header.component.html</context>
           <context context-type="linenumber">60,61</context>
@@ -429,6 +449,7 @@
       </trans-unit>
       <trans-unit id="181464970911903082" datatype="html">
         <source>404 Not Found</source>
+        <target>404 Сторінку не знайдено</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/common/not-found/not-found.component.html</context>
           <context context-type="linenumber">2,3</context>
@@ -450,6 +471,7 @@
       </trans-unit>
       <trans-unit id="5978532162000577988" datatype="html">
         <source>Your donation <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br&gt;"/><x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span class=&quot;text-success&quot;&gt;"/>Their impact<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/></source>
+        <target>Твій донат <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br&gt;"/><x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span class=&quot;text-success&quot;&gt;"/>Їхній внесок<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/></target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/public/home/home.component.html</context>
           <context context-type="linenumber">6,7</context>
@@ -457,6 +479,7 @@
       </trans-unit>
       <trans-unit id="8070404332520291922" datatype="html">
         <source>Together we are stronger. Choose your volunteer to donate to. We believe, that will be a perfect match!</source>
+        <target>Разом сильніші. Обери волонтера до душі та донать. Віримо, буде ідеальний метч!</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/public/home/home.component.html</context>
           <context context-type="linenumber">7,8</context>
@@ -464,6 +487,7 @@
       </trans-unit>
       <trans-unit id="2045779543869682721" datatype="html">
         <source>Get Started</source>
+        <target>Розпочати</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/public/home/home.component.html</context>
           <context context-type="linenumber">10,11</context>
@@ -471,6 +495,7 @@
       </trans-unit>
       <trans-unit id="5964706164241172964" datatype="html">
         <source>Registered volunteers to donate to</source>
+        <target>Волонтерів, яким можна задонатити</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/public/home/home.component.html</context>
           <context context-type="linenumber">18,19</context>
@@ -478,6 +503,7 @@
       </trans-unit>
       <trans-unit id="6259825356409739851" datatype="html">
         <source>Help reports from active volunteers</source>
+        <target>Звітів активних волонтерів</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/public/home/home.component.html</context>
           <context context-type="linenumber">22,23</context>
@@ -485,6 +511,7 @@
       </trans-unit>
       <trans-unit id="1392756751132835557" datatype="html">
         <source>Of good deeds and saved lives</source>
+        <target>Добрих справ та врятованих життів</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/public/home/home.component.html</context>
           <context context-type="linenumber">26,27</context>
@@ -492,6 +519,7 @@
       </trans-unit>
       <trans-unit id="9213157511812650346" datatype="html">
         <source>Meet our <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br&gt;"/><x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span class=&quot;text-success&quot;&gt;"/>dedicated Volunteers<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/></source>
+        <target>Познайомся з<x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br&gt;"/><x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span class=&quot;text-success&quot;&gt;"/>відданими волонтерами<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/></target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/public/home/home.component.html</context>
           <context context-type="linenumber">40,41</context>
@@ -499,6 +527,7 @@
       </trans-unit>
       <trans-unit id="1173071686783422166" datatype="html">
         <source>Learn more about their goals and provided help in their profiles <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br&gt;"/> with the detailed statistics of their activity <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br&gt;"/> based on their reports in the system</source>
+        <target>Дізнавайся про їхні цілі та надану допомогу в профілях <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br&gt;"/> з детальною статистикою по активності <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br&gt;"/> на основі їхніх звітів у системі</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/public/home/home.component.html</context>
           <context context-type="linenumber">41,44</context>
@@ -506,6 +535,7 @@
       </trans-unit>
       <trans-unit id="5886096024646136864" datatype="html">
         <source>Decide on whom to help</source>
+        <target>Вирішуй, кого підтримати</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/public/home/home.component.html</context>
           <context context-type="linenumber">46,47</context>
@@ -513,6 +543,7 @@
       </trans-unit>
       <trans-unit id="4418663787005984182" datatype="html">
         <source>Together we are stonger</source>
+        <target>Разом ми сильніші</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/public/home/home.component.html</context>
           <context context-type="linenumber">59,60</context>
@@ -520,6 +551,7 @@
       </trans-unit>
       <trans-unit id="1149499977263349875" datatype="html">
         <source>Join to make impact!</source>
+        <target>Долучайся, щоб змінити світ!</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/public/home/home.component.html</context>
           <context context-type="linenumber">60,61</context>
@@ -527,6 +559,7 @@
       </trans-unit>
       <trans-unit id="9044474617552570090" datatype="html">
         <source>Log in / Register to become a part of the trustworthy community that workes miracles!</source>
+        <target>Увійди / Зареєструйся, щоб стати частиною спільноти довіри, яка творить дива!</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/public/home/home.component.html</context>
           <context context-type="linenumber">61,62</context>
@@ -534,6 +567,7 @@
       </trans-unit>
       <trans-unit id="2996125927750630203" datatype="html">
         <source>I want to bring the Victory closer!</source>
+        <target>Я хочу наблизити Перемогу!</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/public/home/home.component.html</context>
           <context context-type="linenumber">62,63</context>
@@ -541,6 +575,7 @@
       </trans-unit>
       <trans-unit id="4688442434844724106" datatype="html">
         <source>Log in to proceed:</source>
+        <target>Увійдіть, щоб продовжити:</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/public/login/login.component.html</context>
           <context context-type="linenumber">4,6</context>
@@ -548,6 +583,7 @@
       </trans-unit>
       <trans-unit id="891487624114457799" datatype="html">
         <source>About the volunteer</source>
+        <target>Про волонтера</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/visitor/detailed-volunteer-profile/detailed-volunteer-profile.component.html</context>
           <context context-type="linenumber">9,10</context>
